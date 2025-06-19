@@ -15,6 +15,11 @@ public class JavaProyecto1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        NewJFrame ventana = new NewJFrame();
+        
+        ventana.setVisible(true);
+        
     }
     
 }
