@@ -18,6 +18,6 @@ public class OrdenarCelebracionesFrame extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
-        // Aquí implementarás tu panel y componentes
+        
     }
 }
