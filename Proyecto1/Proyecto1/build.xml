@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch4jConfig>
-  <dontWrapJar>false</dontWrapJar>
+  <dontWrapJar>true</dontWrapJar>
   <headerType>gui</headerType>
-  <jar>C:\Users\User\Documents\Estructura_de_Datos_2025\Data_Structures_UNED\Proyecto1\Proyecto1\dist\Proyecto1.jar</jar>
-  <outfile>C:\Users\User\Documents\Estructura_de_Datos_2025\Data_Structures_UNED\Proyecto1\Proyecto1\dist\proyecto1-2.exe</outfile>
+  <jar></jar>
+  <outfile>C:\Users\User\Documents\Estructura_de_Datos_2025\Data_Structures_UNED\Proyecto1\Proyecto1\dist\proyecto.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
