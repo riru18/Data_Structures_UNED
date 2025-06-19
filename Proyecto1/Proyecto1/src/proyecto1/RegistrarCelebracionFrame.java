@@ -13,8 +13,8 @@ package proyecto1;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 import java.util.ArrayList;
+import java.util.Properties;
 import org.jdatepicker.impl.*;
 
 
@@ -33,13 +33,15 @@ public class RegistrarCelebracionFrame extends JFrame {
         setSize(400, 250);
         setLayout(new BorderLayout());
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setVisible(true);
+        setLocationRelativeTo(null);
 
         // Panel de formulario
         JPanel formPanel = new JPanel(new GridLayout(4, 2, 5, 5));
         JLabel idLabel = new JLabel("ID:");
         idField = new JTextField();
         idField.setEditable(false);
-        idField.setText(String.valueOf(Celebracion.class.getDeclaredFields()[0].getInt(null))); // Opcional: mostrar ID sugerido
+        //idField.setText(String.valueOf(Celebracion.class.getDeclaredFields()[0].getInt(null))); // Opcional: mostrar ID sugerido
 
         JLabel fechaLabel = new JLabel("Fecha (AAAA-MM-DD):");
 
