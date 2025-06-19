@@ -18,34 +18,32 @@ import java.util.Properties;
 import org.jdatepicker.impl.*;
 
 
-
 public class RegistrarCelebracionFrame extends JFrame {
+    private static int idActual = 1;
     private static ArrayList<Celebracion> celebraciones = new ArrayList<>();
 
-    private JTextField descripcionField;
-    private JTextField paisField;
-    private JTextField idField;
-
+    private JTextField txtId;
     private JDatePickerImpl datePicker;
+    private JTextField txtDescripcion;
+    private JTextField txtPais;
 
     public RegistrarCelebracionFrame() {
         setTitle("Registrar Celebración");
         setSize(400, 250);
-        setLayout(new BorderLayout());
+        setLayout(new GridLayout(5, 2, 10, 5));
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setVisible(true);
         setLocationRelativeTo(null);
+        setVisible(true);
 
-        // Panel de formulario
-        JPanel formPanel = new JPanel(new GridLayout(4, 2, 5, 5));
-        JLabel idLabel = new JLabel("ID:");
-        idField = new JTextField();
-        idField.setEditable(false);
-        //idField.setText(String.valueOf(Celebracion.class.getDeclaredFields()[0].getInt(null))); // Opcional: mostrar ID sugerido
 
-        JLabel fechaLabel = new JLabel("Fecha (AAAA-MM-DD):");
+        // ID no editable
+        add(new JLabel("ID:"));
+        txtId = new JTextField(String.valueOf(idActual));
+        txtId.setEditable(false);
+        add(txtId);
 
-        // Configuración del JDatePicker
+        // Fecha con JDatePicker
+        add(new JLabel("Fecha (AAAA-MM-DD):"));
         UtilDateModel model = new UtilDateModel();
         Properties p = new Properties();
         p.put("text.today", "Hoy");
@@ -53,53 +51,50 @@ public class RegistrarCelebracionFrame extends JFrame {
         p.put("text.year", "Año");
         JDatePanelImpl datePanel = new JDatePanelImpl(model, p);
         datePicker = new JDatePickerImpl(datePanel, new DateLabelFormatter());
+        add(datePicker);
 
-        JLabel descripcionLabel = new JLabel("Descripción:");
-        descripcionField = new JTextField();
+        // Descripción
+        add(new JLabel("Descripción:"));
+        txtDescripcion = new JTextField();
+        add(txtDescripcion);
 
-        JLabel paisLabel = new JLabel("País:");
-        paisField = new JTextField();
+        // País
+        add(new JLabel("País:"));
+        txtPais = new JTextField();
+        add(txtPais);
 
-        formPanel.add(fechaLabel);
-        formPanel.add(datePicker);
-        formPanel.add(descripcionLabel);
-        formPanel.add(descripcionField);
-        formPanel.add(paisLabel);
-        formPanel.add(paisField);
-
-        JButton guardarButton = new JButton("Guardar");
-        guardarButton.addActionListener(e -> guardarCelebracion());
-
-        JPanel buttonPanel = new JPanel();
-        buttonPanel.add(guardarButton);
-
-        add(formPanel, BorderLayout.CENTER);
-        add(buttonPanel, BorderLayout.SOUTH);
+        // Botón guardar
+        JButton btnGuardar = new JButton("Guardar");
+        btnGuardar.addActionListener(e -> guardarCelebracion());
+        add(btnGuardar);
     }
 
     private void guardarCelebracion() {
-        String fecha = datePicker.getJFormattedTextField().getText().trim();
-        String descripcion = descripcionField.getText().trim();
-        String pais = paisField.getText().trim();
+        try {
+            String fecha = datePicker.getJFormattedTextField().getText();
+            String descripcion = txtDescripcion.getText().trim();
+            String pais = txtPais.getText().trim();
 
-        if (fecha.isEmpty() || descripcion.isEmpty() || pais.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Todos los campos deben estar completos.");
-            return;
+            if (fecha.isEmpty() || descripcion.isEmpty() || pais.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Todos los campos son obligatorios.");
+                return;
+            }
+
+            Celebracion nueva = new Celebracion(fecha, descripcion, pais);
+            celebraciones.add(nueva);
+            idActual++;
+
+           
+            this.dispose();
+
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Error al registrar la celebración: " + ex.getMessage());
         }
-
-        Celebracion nueva = new Celebracion(fecha, descripcion, pais);
-        celebraciones.add(nueva);
-
-        // Limpiar campos
-        descripcionField.setText("");
-        paisField.setText("");
-        datePicker.getModel().setValue(null);
     }
 
-    // Acceso desde otras clases
+    // Getter para que otras clases accedan a la lista
     public static ArrayList<Celebracion> getCelebraciones() {
         return celebraciones;
     }
 }
-
 
