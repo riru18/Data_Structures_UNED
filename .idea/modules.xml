@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Tutoria1/ArrayListDemo/ArrayListDemo.iml" filepath="$PROJECT_DIR$/Tutoria1/ArrayListDemo/ArrayListDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutoria1/CantidadNumeros/CantidadNumeros.iml" filepath="$PROJECT_DIR$/Tutoria1/CantidadNumeros/CantidadNumeros.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Data_Structures_UNED.iml" filepath="$PROJECT_DIR$/.idea/Data_Structures_UNED.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutoria1/FactorialRecursivo/FactorialRecursivo.iml" filepath="$PROJECT_DIR$/Tutoria1/FactorialRecursivo/FactorialRecursivo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutoria1/Fibonacci/Fibonacci.iml" filepath="$PROJECT_DIR$/Tutoria1/Fibonacci/Fibonacci.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutoria1/InsercionSortDemo/InsercionSortDemo.iml" filepath="$PROJECT_DIR$/Tutoria1/InsercionSortDemo/InsercionSortDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutoria1/InvertirCadena/InvertirCadena.iml" filepath="$PROJECT_DIR$/Tutoria1/InvertirCadena/InvertirCadena.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutoria1/JOptionPaneDemo/JOptionPaneDemo.iml" filepath="$PROJECT_DIR$/Tutoria1/JOptionPaneDemo/JOptionPaneDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutoria1/LinkedListDemo/LinkedListDemo.iml" filepath="$PROJECT_DIR$/Tutoria1/LinkedListDemo/LinkedListDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutoria1/ListIteratorDemo/ListIteratorDemo.iml" filepath="$PROJECT_DIR$/Tutoria1/ListIteratorDemo/ListIteratorDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutoria1/MergeSortDemo/MergeSortDemo.iml" filepath="$PROJECT_DIR$/Tutoria1/MergeSortDemo/MergeSortDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutoria1/PartidoFutbol/PartidoFutbol.iml" filepath="$PROJECT_DIR$/Tutoria1/PartidoFutbol/PartidoFutbol.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Proyecto1/Proyecto1.iml" filepath="$PROJECT_DIR$/Proyecto1/Proyecto1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutoria1/QueueDemo/QueueDemo.iml" filepath="$PROJECT_DIR$/Tutoria1/QueueDemo/QueueDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutoria1/SeleccionSortDemo/SeleccionSortDemo.iml" filepath="$PROJECT_DIR$/Tutoria1/SeleccionSortDemo/SeleccionSortDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutoria1/StackDemo/StackDemo.iml" filepath="$PROJECT_DIR$/Tutoria1/StackDemo/StackDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutoria1/SumarDigitos/SumarDigitos.iml" filepath="$PROJECT_DIR$/Tutoria1/SumarDigitos/SumarDigitos.iml" />
+    </modules>
+  </component>
+</project>
