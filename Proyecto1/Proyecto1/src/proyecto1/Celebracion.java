@@ -10,7 +10,7 @@ package proyecto1;
  */
 public class Celebracion {
 
-    private static int contador = 1; // Genera IDs únicos automáticamente
+    private static int contador = 1; // Genera IDs únicos 
     private int id;
     private String fecha;
     private String descripcion;
