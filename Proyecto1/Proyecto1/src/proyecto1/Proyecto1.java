@@ -11,6 +11,7 @@ package proyecto1;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 
 
@@ -31,7 +32,7 @@ public class Proyecto1 extends JFrame {
 
         // Acción de botones
         
-        btnRegistrar.addActionListener(e -> new RegistrarCelebracionFrame());
+        btnRegistrar.addActionListener(e -> new RegistrarCelebracionFrame().setVisible(true));
         btnListar.addActionListener(e -> new ListarCelebracionesFrame());
         btnBuscarEditar.addActionListener(e -> new BuscarEditarCelebracionFrame());
         btnPaisesInvertidos.addActionListener(e -> new PaisesInvertidosFrame());

@@ -3,7 +3,7 @@
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
   <jar>C:\Users\User\Documents\Estructura_de_Datos_2025\Data_Structures_UNED\Proyecto1\Proyecto1\dist\Proyecto1.jar</jar>
-  <outfile>C:\Users\User\Documents\proyecto1.exe</outfile>
+  <outfile>C:\Users\User\Documents\Estructura_de_Datos_2025\Data_Structures_UNED\Proyecto1\Proyecto1\dist\proyecto.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
@@ -22,7 +22,7 @@
     <path>%JAVA_HOME%;%PATH%</path>
     <requiresJdk>false</requiresJdk>
     <requires64Bit>false</requires64Bit>
-    <minVersion>1.8.0</minVersion>
+    <minVersion></minVersion>
     <maxVersion></maxVersion>
   </jre>
 </launch4jConfig>

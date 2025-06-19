@@ -33,7 +33,7 @@ public class RegistrarCelebracionFrame extends JFrame {
         setLayout(new GridLayout(5, 2, 10, 5));
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
-        setVisible(true);
+        
 
 
         // ID no editable
