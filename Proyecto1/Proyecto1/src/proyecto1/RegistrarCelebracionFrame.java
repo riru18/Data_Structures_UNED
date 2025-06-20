@@ -35,14 +35,13 @@ public class RegistrarCelebracionFrame extends JFrame {
         setLocationRelativeTo(null);
         
 
-
-        // ID no editable
-        add(new JLabel("ID:"));
+       
+        add(new JLabel("ID:")); // ID no editable
         txtId = new JTextField(String.valueOf(idActual));
         txtId.setEditable(false);
         add(txtId);
 
-        // Fecha con JDatePicker
+        // manejo de fechas con JDatePicker
         add(new JLabel("Fecha (AAAA-MM-DD):"));
         UtilDateModel model = new UtilDateModel();
         Properties p = new Properties();
@@ -53,12 +52,12 @@ public class RegistrarCelebracionFrame extends JFrame {
         datePicker = new JDatePickerImpl(datePanel, new DateLabelFormatter());
         add(datePicker);
 
-        // Descripción
+        // agrega botón descripción
         add(new JLabel("Descripción:"));
         txtDescripcion = new JTextField();
         add(txtDescripcion);
 
-        // País
+        // botón de país
         add(new JLabel("País:"));
         txtPais = new JTextField();
         add(txtPais);
@@ -75,24 +74,26 @@ public class RegistrarCelebracionFrame extends JFrame {
             String descripcion = txtDescripcion.getText().trim();
             String pais = txtPais.getText().trim();
 
+            // verificar que usuario ingrese todos los datos
             if (fecha.isEmpty() || descripcion.isEmpty() || pais.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Todos los campos son obligatorios.");
                 return;
             }
 
+            // agrega información ingresada
             Celebracion nueva = new Celebracion(fecha, descripcion, pais);
             celebraciones.add(nueva);
             idActual++;
 
            
-            this.dispose();
+            this.dispose(); //cierra ventana sin mensaje de confirmación
 
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(this, "Error al registrar la celebración: " + ex.getMessage());
+            JOptionPane.showMessageDialog(this, "Error al registrar la celebración: " + ex.getMessage()); //manejo de exccepción
         }
     }
 
-    // Getter para que otras clases accedan a la lista
+    // getter para otras clases
     public static ArrayList<Celebracion> getCelebraciones() {
         return celebraciones;
     }

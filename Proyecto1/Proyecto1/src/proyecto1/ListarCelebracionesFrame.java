@@ -26,18 +26,21 @@ public class ListarCelebracionesFrame extends JFrame {
         setLayout(new BorderLayout());
         setVisible(true);
 
-        // Columnas de la tabla
+        // se definen las columnas de la tabla a usar
         String[] columnas = {"ID", "Fecha", "Descripción", "País"};
 
-        // Usamos Iterator para recorrer la colección
+        // se obtiene la lista de celebraciones 
         ArrayList<Celebracion> celebraciones = RegistrarCelebracionFrame.getCelebraciones();
+        
+        // se crea modelo de tabla no editable haciendo @override
         DefaultTableModel modelo = new DefaultTableModel(columnas, 0) {
             @Override
             public boolean isCellEditable(int row, int column) {
-                return false;
+                return false; // asegura que la tabla no sea editable
             }
         };
 
+           // se utiliza Iterator para recorrer la colección
         Iterator<Celebracion> it = celebraciones.iterator();
         while (it.hasNext()) {
             Celebracion c = it.next();
@@ -47,9 +50,10 @@ public class ListarCelebracionesFrame extends JFrame {
                 c.getDescripcion(),
                 c.getPais()
             };
-            modelo.addRow(fila);
+            modelo.addRow(fila); // agrega cada fila recorrida a la tabla 
         }
 
+        // crea la tabla usando modelo y se coloca en scroll
         JTable tabla = new JTable(modelo);
         JScrollPane scroll = new JScrollPane(tabla);
         add(scroll, BorderLayout.CENTER);
